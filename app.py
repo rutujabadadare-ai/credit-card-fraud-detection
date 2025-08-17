@@ -2,18 +2,17 @@ import streamlit as st
 import joblib, json
 import numpy as np
 
-# Load artifacts
-model = joblib.load("fraud_model.pkl")
-with open("feature_names.json") as f:
+# ✅ Load the DEMO model (not the full one)
+model = joblib.load("fraud_demo_model.pkl")
+with open("demo_feature_names.json") as f:
     feature_names = json.load(f)
 
 st.set_page_config(page_title="Fraud Detection", page_icon="💳", layout="centered")
-st.title("💳 Credit Card Fraud Detection")
-st.write("Enter transaction details and predict if it's Fraudulent.")
+st.title("💳 Credit Card Fraud Detection (Demo App)")
+st.write("This is a **simplified demo** using only 5 features for easy interaction.")
 
-# User inputs
 inputs = []
-for name in feature_names[:5]:   # just take first 5 features to keep it simple
+for name in feature_names:
     val = st.number_input(f"{name}", value=0.0)
     inputs.append(val)
 
