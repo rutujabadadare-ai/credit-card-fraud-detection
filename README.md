@@ -8,7 +8,8 @@ End-to-end ML demo: trained in Google Colab and deployed on Streamlit Cloud.
 - Uses a trained scikit-learn model (`fraud_model.pkl`)
 
 ## 🚀 Live Demo
-Try it here: https://your-username-credit-card-fraud-detection.streamlit.app
+Try it here: [https://your-username-credit-card-fraud-detection.streamlit.app](https://fraud-detection-demo.streamlit.app
+)
 
 ## 🧩 Run locally
 ```bash
